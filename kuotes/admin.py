@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from kuotes.models import Kuote
+
+admin.site.register(Kuote)
