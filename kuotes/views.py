@@ -1,5 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+
+from kuotes.models import Kuote
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    context = {
+        'recent_kuotes': Kuote.objects.all()[:5]
+    }
+    return render(request, 'index.html', context)
