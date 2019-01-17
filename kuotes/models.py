@@ -29,3 +29,4 @@ class Kuote(models.Model):
     content = models.CharField(max_length=280)
     slug = models.TextField()
     source = models.EmbeddedModelField(model_container=Source)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
