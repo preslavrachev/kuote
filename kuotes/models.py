@@ -21,6 +21,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 
 
 class Source(models.Model):
+    title = models.CharField(max_length=280)
     url = models.URLField(verbose_name='Source URL')
     image_url = models.URLField(verbose_name='Image URL')
 
